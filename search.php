@@ -5,7 +5,7 @@
 <title>検索画面</title>
 </head>
 <body>
-<form action="search.php" method="get" name='enquete'>
+<form action="search.php" method="GET" name='enquete'>
 <table>
     <tr>
         <td>氏名</td>
@@ -40,46 +40,6 @@
 	</tr>
 </table>
 <table>
-<?php
-// テーブルタグを作成し、テーブルヘッダーで見出しを作る
-echo '<table border="1">
-    <tr>
-    <th>氏名</th>
-    <th>年齢</th>
-    <th>性別</th>
-    <th>住所</th>
-    <th>電話番号</th>
-    <th>メールアドレス</th>
-    <th>感想</th>
-    </tr>';
-
-    $fp = fopen("data.csv", "r");
-
-    // while文でCSVファイルのデータを1つずつ繰り返し読み込む
-    while($data = fgetcsv($fp))
-    {
-        var_dump($data);
-        mb_convert_variables("UTF-8", "SJIS", $data);
-        var_dump($data);
-
-        // テーブルセルに配列の値を格納
-        echo '<tr>';
-        echo '<td>'.$data[0].'</td>';
-        echo '<td>'.$data[1].'</td>';
-        echo '<td>'.$data[2].'</td>';
-        echo '<td>'.$data[3].'</td>';
-        echo '<td>'.$data[4].'</td>';
-        echo '<td>'.$data[5].'</td>';
-        echo '<td>'.$data[6].'</td>';
-        echo '</tr>';
-    }
-
-// テーブルの閉じタグ
-echo '</table>';
-
-// 開いたファイルを閉じる
-fclose($fp);
-?>
 </table>
 </form>
 </body>
