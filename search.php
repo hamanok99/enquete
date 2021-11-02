@@ -58,7 +58,7 @@ echo '<table border="1">
 
     while (($array = fgetcsv($fp)) !== FALSE) {
         echo "1";
-        $arr = mb_convert_encoding($array, 'UTF-8', 'ASCII, JIS, UTF-8, SJIS');
+        echo $array[0];
         echo "2";
         var_dump($arr);
     }
