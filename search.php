@@ -1,10 +1,11 @@
+<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
 <title>検索画面</title>
 </head>
 <body>
-<form action="search.php" method="post" name='enquete'>
+<form action="search.php" method="get" name='enquete'>
 <table>
     <tr>
         <td>氏名</td>
