@@ -52,8 +52,12 @@ echo '<table border="1">
     <th>メールアドレス</th>
     <th>感想</th>
     </tr>';
+
+    $sjis_data = file_get_contents('data.csv');
+
     // テーブルの閉じタグ
     echo '</table>';
+
 ?>
 </table>
 </form>
