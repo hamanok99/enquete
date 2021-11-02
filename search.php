@@ -52,16 +52,8 @@ echo '<table border="1">
     <th>メールアドレス</th>
     <th>感想</th>
     </tr>';
-
-    $fp = fopen("data.csv", "r");
-
-
-
     // テーブルの閉じタグ
     echo '</table>';
-
-    // 開いたファイルを閉じる
-    fclose($fp);
 ?>
 </table>
 </form>
