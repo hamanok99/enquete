@@ -57,6 +57,7 @@ echo '<table border="1">
     $fp = fopen('data.csv', 'r');
 
     while (($array = fgetcsv($fp)) !== FALSE) {
+        var_dump($array);
     }
 
     fclose($fp);
