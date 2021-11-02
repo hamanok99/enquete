@@ -1,3 +1,3 @@
 <?php
-unlink("data.csv");
+var_dump(unlink("data.csv"));
 ?>
