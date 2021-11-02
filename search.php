@@ -5,7 +5,7 @@
 <title>検索画面</title>
 </head>
 <body>
-<form action="search.php" method="GET" name='enquete'>
+<form action="search.php" method="POST" name='enquete'>
 <table>
     <tr>
         <td>氏名</td>
@@ -58,6 +58,7 @@ echo '<table border="1">
 
     while (($array = fgetcsv($fp)) !== FALSE) {
         var_dump($array);
+        mb_convert_encoding ($array[0] , "UTF-8", "SJIS-win");
     }
 
     fclose($fp);
