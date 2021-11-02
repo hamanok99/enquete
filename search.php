@@ -40,6 +40,29 @@
 	</tr>
 </table>
 <table>
+<?php
+// テーブルタグを作成し、テーブルヘッダーで見出しを作る
+echo '<table border="1">
+    <tr>
+    <th>氏名</th>
+    <th>年齢</th>
+    <th>性別</th>
+    <th>住所</th>
+    <th>電話番号</th>
+    <th>メールアドレス</th>
+    <th>感想</th>
+    </tr>';
+
+    $fp = fopen("data.csv", "r");
+
+
+
+    // テーブルの閉じタグ
+    echo '</table>';
+
+    // 開いたファイルを閉じる
+    fclose($fp);
+?>
 </table>
 </form>
 </body>
