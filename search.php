@@ -56,6 +56,9 @@ echo '<table border="1">
     // data.csv（SJIS）を読み込む
     $fp = fopen('data.csv', 'r');
 
+    while (($array = fgetcsv($fp)) !== FALSE) {
+    }
+
     fclose($fp);
 
     // テーブルの閉じタグ
