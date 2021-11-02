@@ -56,8 +56,13 @@ echo '<table border="1">
     // data.csv（SJIS）を読み込む
     $sjis_data = file_get_contents('data.csv');
     var_dump($sjis_data);
+    var_dump(mb_convert_encoding($sjis_data, 'UTF-8', 'SJIS'));
     // 一時ファイル作成
     $fp = tmpfile();
+    // UTF-8に変換して一時ファイルに書き込み
+    fwrite($fp, mb_convert_encoding($sjis_data, 'UTF-8', 'SJIS'));
+    // ポインタを先頭に
+    fseek($fp, 0);
 
     // テーブルの閉じタグ
     echo '</table>';
