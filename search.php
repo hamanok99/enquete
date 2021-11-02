@@ -52,29 +52,27 @@ echo '<table border="1">
     <th>メールアドレス</th>
     <th>感想</th>
     </tr>';
-    // data.csv（SJIS）を読み込む
-$sjis_data = file_get_contents('data.csv');
-// 一時ファイル作成
-$fp = tmpfile();
-// UTF-8に変換して一時ファイルに書き込み
-fwrite($fp, mb_convert_encoding($sjis_data, 'UTF-8', 'SJIS-win'));
-// ポインタを先頭に
-fseek($fp, 0);
 
-// while文でCSVファイルのデータを1つずつ繰り返し読み込む
-while($data = fgetcsv($fp)){
+    $fp = fopen("data.csv", "r");
 
-    // テーブルセルに配列の値を格納
-    echo '<tr>';
-    echo '<td>'.$data[0].'</td>';
-    echo '<td>'.$data[1].'</td>';
-    echo '<td>'.$data[2].'</td>';
-    echo '<td>'.$data[3].'</td>';
-    echo '<td>'.$data[4].'</td>';
-    echo '<td>'.$data[5].'</td>';
-    echo '<td>'.$data[6].'</td>';
-    echo '</tr>';
-}
+    // while文でCSVファイルのデータを1つずつ繰り返し読み込む
+    while($data = fgetcsv($fp))
+    {
+        var_dump($data);
+        mb_convert_variables("UTF-8", "SJIS", $data);
+        var_dump($data);
+
+        // テーブルセルに配列の値を格納
+        echo '<tr>';
+        echo '<td>'.$data[0].'</td>';
+        echo '<td>'.$data[1].'</td>';
+        echo '<td>'.$data[2].'</td>';
+        echo '<td>'.$data[3].'</td>';
+        echo '<td>'.$data[4].'</td>';
+        echo '<td>'.$data[5].'</td>';
+        echo '<td>'.$data[6].'</td>';
+        echo '</tr>';
+    }
 
 // テーブルの閉じタグ
 echo '</table>';
