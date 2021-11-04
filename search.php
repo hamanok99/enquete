@@ -3,6 +3,27 @@
 <head>
 <meta charset="utf-8">
 <title>検索画面</title>
+<style type="text/css">
+table, th, td {
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  line-height: 1.5;
+}
+
+table.type06 th {
+  width: 150px;
+  padding: 10px;
+  font-weight: bold;
+  vertical-align: top;
+  background: #3f3f3f;
+  color: #ffffff;
+}
+table.type06 td {
+  width: 350px;
+  padding: 10px;
+  vertical-align: top;
+}
+</style>
 </head>
 <body>
 <form action="search.php" method="POST" name='enquete'>
@@ -42,7 +63,7 @@
 <table>
 <?php
 // テーブルタグを作成し、テーブルヘッダーで見出しを作る
-echo '<table border="1">
+echo '<table class="type06">
     <tr>
     <th>氏名</th>
     <th>年齢</th>
@@ -51,21 +72,26 @@ echo '<table border="1">
     <th>電話番号</th>
     <th>メールアドレス</th>
     <th>感想</th>
-    </tr>';
-
-    // data.csv（SJIS）を読み込む
-    $fp = fopen('data.csv', 'r');
-
-    while (($array = fgetcsv($fp)) !== FALSE) {
-        echo "1";
-        var_dump(mb_convert_encoding($array, "UTF-8", "SJIS-win"));
-        echo "2";
-    }
-
-    fclose($fp);
-
-    // テーブルの閉じタグ
-    echo '</table>';
+    </tr>
+    <tr>
+        <td>山田</td>
+        <td>50</td>
+        <td>男性</td>
+        <td>熊本県</td>
+        <td>00011112222</td>
+        <td>test@test.com</td>
+        <td>良い</td>
+    </tr>
+    <tr>
+        <td>田中</td>
+        <td>30</td>
+        <td>男性</td>
+        <td>東京都</td>
+        <td>08011112222</td>
+        <td>test@co.jp</td>
+        <td>普通</td>
+    </tr>
+    </table>';
 
 ?>
 </table>
