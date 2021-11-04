@@ -58,10 +58,8 @@ echo '<table border="1">
 
     while (($array = fgetcsv($fp)) !== FALSE) {
         echo "1";
-        $str = mb_convert_encoding($array[0], "UTF-8", "auto");
-        echo $str;
+        var_dump(mb_convert_encoding($array, "UTF-8", "SJIS-win"));
         echo "2";
-        var_dump($arr);
     }
 
     fclose($fp);
