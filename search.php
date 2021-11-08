@@ -26,7 +26,6 @@
                     <td class="contact-body">
                         <select name="gender" class="form-select">
                             <option value="" hidden>選択してください</option>
-
                             <option value="man">男性</option>
                             <option value="woman">女性</option>
                         </select>
@@ -97,18 +96,29 @@
                         echo "<td>" . $data[$i] . "</td>";
                     }
                     echo '</tr>';
-                    }else if (isset($_POST["name"], $_POST["age"], $_POST["gender"],
-                    $_POST["address"], $_POST["telephone"], $_POST["mail"], $_POST["thoughts"])) {
-                        if(empty($_POST['name'] && $_POST['age'] && $_POST['gender'] &&
-                        $_POST['address'] && $_POST['telephone'] && $_POST['mail'] && $_POST['thoughts'])){
-                            echo '<tr>';
-                            for ($i=0;$i<count($data);$i++) {
-                            echo "<td>" . $data[$i] . "</td>";
-                            }
-                            echo '</tr>';
-                        }
+                    }else if (isset($_POST["name"]))
+                              {
+                                  echo "setOK";
+                                  echo $_POST['name'] . $_POST['age'] . $_POST['gender'] . $_POST['address'] . $_POST['telephone'] . $_POST['mail'] . $_POST['thoughts'];
+                                if (empty($_POST['name']) &&
+                                    empty($_POST['age']) &&
+                                    empty($_POST['gender']) &&
+                                    empty($_POST['address']) &&
+                                    empty($_POST['telephone']) &&
+                                    empty($_POST['mail']) &&
+                                    empty($_POST['thoughts']))
+                                    {
+                                        echo "empty";
+                                        echo '<tr>';
+                                        for ($i=0;$i<count($data);$i++) {
+                                        echo "<td>" . $data[$i] . "</td>";
+                                    }
+                                    echo '</tr>';
+                                }
                     }
                 }
+                 // テーブルの閉じタグ
+                echo '</table>';
                 // 開いたファイルを閉じる
                 fclose($fp);
                 ?>
@@ -117,3 +127,4 @@
     </div>
 </body>
 </html>
+
