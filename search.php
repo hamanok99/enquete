@@ -121,8 +121,8 @@
                     // テーブルセルに配列の値を格納
                     elseif (isset($_POST["name"])) {
                         echo '全検索';
-                        if(empty($_POST['name'] && $_POST['age'] && $_POST['gender'] &&
-                        $_POST['address'] && $_POST['telephone'] && $_POST['mail'] && $_POST['thoughts'])){
+                        echo $_POST['name'];
+                        if(empty($_POST['name'])){
                             echo '<tr>';
                             for ($i=0;$i<count($data);$i++) {
                             echo "<td>" . $data[$i] . "</td>";
