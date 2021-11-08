@@ -53,15 +53,15 @@
                     <th class="contact-item">感想</th>
                     <td class="contact-body">
                     <label class="contact-thoughts">
-                        <input type="radio" name="thoughts" value="good">
+                        <input type="radio" name="test" value="good" />
                         <span class="contact-thoughts-txt">良い</span>
                     </label>
                     <label class="contact-thoughts">
-                        <input type="radio" name="thoughts" value="normal">
+                        <input type="radio" name="test" value="normal" />
                         <span class="contact-thoughts-txt">普通</span>
                     </label>
                     <label class="contact-thoughts">
-                        <input type="radio" name="thoughts" value="bad">
+                        <input type="radio" name="test" value="bad" />
                         <span class="contact-thoughts-txt">悪い</span>
                     </label>
                     </td>
@@ -106,7 +106,7 @@
                         isset($_GET["address"]) &&
                         isset($_GET["telephone"]) &&
                         isset($_GET["mail"]) &&
-                        isset($_GET["thoughts"]))
+                        isset($_GET["test"]))
                     {
                         if(empty($_GET['name'] && $_GET['age'] && $_GET['gender'] && $_GET['address'] && $_GET['telephone'] && $_GET['mail'] && $_GET['thoughts']))
                         {
