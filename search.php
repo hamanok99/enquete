@@ -92,8 +92,6 @@
                     $i++;
                     mb_convert_variables("UTF-8", "SJIS-win", $data);
                     // test
-                    echo "data[0]:" . $data[0] . "<br/>";
-                    echo "_POST[name]:" . $_POST['name'] . "<br/>";
                     if($data[0]===$_POST['name']){
                         echo "一致<br/>";
                         echo '<tr>';
@@ -102,41 +100,27 @@
                         }
                         echo '</tr>';
                     }
-                    echo "data[1]:" . $data[1] . "<br/>";
-                    echo "_POST[age]:" . $_POST['age'] . "<br/>";
-                    if ($data[1]===$_POST['age']){
+                    elseif ($data[1]===$_POST['age']){
                         echo "一致<br/>";
                     }
-                    echo "data[2]:" . $data[2] . "<br/>";
-                    echo "_POST[gender]:" . $_POST['gender'] . "<br/>";
-                    if ($data[2]===$_POST['gender']){
+                    elseif ($data[2]===$_POST['gender']){
                         echo "一致<br/>";
                     }
-                    echo "data[3]:" . $data[3] . "<br/>";
-                    echo "_POST[address]:" . $_POST['address'] . "<br/>";
-                    if ($data[3]===$_POST['address']){
+                    elseif ($data[3]===$_POST['address']){
                         echo "一致<br/>";
                     }
-                    echo "data[4]:" . $data[4] . "<br/>";
-                    echo "_POST[telephone]:" . $_POST['telephone'] . "<br/>";
-                    if ($data[4]===$_POST['telephone']){
+                    elseif ($data[4]===$_POST['telephone']){
                         echo "一致<br/>";
                     }
-                    echo "data[5]:" . $data[5] . "<br/>";
-                    echo "_POST[mail]:" . $_POST['mail'] . "<br/>";
-                    if ($data[5]===$_POST['mail']){
+                    elseif ($data[5]===$_POST['mail']){
                         echo "一致<br/>";
                     }
-                    echo "data[6]:" . $data[6] . "<br/>";
-                    echo "_POST[thoughts]:" . $_POST['thoughts'] . "<br/>";
-                    if ($data[6]===$_POST['thoughts']){
+                    elseif ($data[6]===$_POST['thoughts']){
                         echo "一致<br/>";
                     }
                     // テーブルセルに配列の値を格納
-
-
-/*
-                    if (isset($_POST["name"])) {
+                    elseif (isset($_POST["name"])) {
+                        echo '全検索';
                         if(empty($_POST['name'] && $_POST['age'] && $_POST['gender'] &&
                         $_POST['address'] && $_POST['telephone'] && $_POST['mail'] && $_POST['thoughts'])){
                             echo '<tr>';
@@ -145,7 +129,7 @@
                             }
                             echo '</tr>';
                         }
-                    }*/
+                    }
                 }
                 // 開いたファイルを閉じる
                 fclose($fp);
