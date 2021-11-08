@@ -52,17 +52,22 @@
                 <tr>
                     <th class="contact-item">感想</th>
                     <td class="contact-body">
-                        <input type="radio" name="test" value="good" />
+                    <label class="contact-thoughts">
+                        <input type="radio" name="thoughts" value="good" />
                         <span class="contact-thoughts-txt">良い</span>
-                        <input type="radio" name="test" value="normal" />
+                    </label>
+                    <label class="contact-thoughts">
+                        <input type="radio" name="thoughts" value="normal" />
                         <span class="contact-thoughts-txt">普通</span>
-                        <input type="radio" name="test" value="bad" />
+                    </label>
+                    <label class="contact-thoughts">
+                        <input type="radio" name="thoughts" value="bad" />
                         <span class="contact-thoughts-txt">悪い</span>
-
-                    <input type="radio" name="kisetsu" value="春" checked>春<br>
-	<input type="radio" name="kisetsu" value="夏">夏<br>
-	<input type="radio" name="kisetsu" value="秋">秋<br>
-
+                    </label>
+                    <label class="contact-thoughts">
+                        <input type="radio" name="thoughts" value="" />
+                        <span class="contact-thoughts-txt"　checked="checked" style="display:none;"></span>
+                    </label>
                 </td>
                 </tr>
                 <tr>
