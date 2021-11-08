@@ -97,13 +97,7 @@
                         echo "<td>" . $data[$i] . "</td>";
                     }
                     echo '</tr>';
-                    }else if (isset($_POST["name"]) &&
-                              isset($_POST["age"]) &&
-                              isset($_POST["gender"]) &&
-                              isset($_POST["address"]) &&
-                              isset($_POST["telephone"]) &&
-                              isset($_POST["mail"]) &&
-                              isset($_POST["thoughts"]))
+                    }else if (isset($_POST["name"]))
                               {
                                   echo "setOK";
                                   echo $_POST['name'] . $_POST['age'] . $_POST['gender'] . $_POST['address'] . $_POST['telephone'] . $_POST['mail'] . $_POST['thoughts'];
