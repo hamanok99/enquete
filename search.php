@@ -97,21 +97,28 @@
                         echo "<td>" . $data[$i] . "</td>";
                     }
                     echo '</tr>';
-                    }else if (isset($_POST["name"], $_POST["age"], $_POST["gender"],$_POST["address"], $_POST["telephone"], $_POST["mail"], $_POST["thoughts"])) {
-                        if (empty($_POST['name']) &&
-                            empty($_POST['age']) &&
-                            empty($_POST['gender']) &&
-                            empty($_POST['address']) &&
-                            empty($_POST['telephone']) &&
-                            empty($_POST['mail']) &&
-                            empty($_POST['thoughts']))
-                            {
-                                echo '<tr>';
-                                for ($i=0;$i<count($data);$i++) {
-                                echo "<td>" . $data[$i] . "</td>";
-                            }
-                            echo '</tr>';
-                        }
+                    }else if (isset($_POST["name"]) &&
+                              isset($_POST["age"]) &&
+                              isset($_POST["gender"]) &&
+                              isset($_POST["address"]) &&
+                              isset($_POST["telephone"]) &&
+                              isset($_POST["mail"]) &&
+                              isset($_POST["thoughts"]))
+                              {
+                                if (empty($_POST['name']) &&
+                                    empty($_POST['age']) &&
+                                    empty($_POST['gender']) &&
+                                    empty($_POST['address']) &&
+                                    empty($_POST['telephone']) &&
+                                    empty($_POST['mail']) &&
+                                    empty($_POST['thoughts']))
+                                    {
+                                        echo '<tr>';
+                                        for ($i=0;$i<count($data);$i++) {
+                                        echo "<td>" . $data[$i] . "</td>";
+                                    }
+                                    echo '</tr>';
+                                }
                     }
                 }
                  // テーブルの閉じタグ
