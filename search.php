@@ -86,44 +86,54 @@
                 // test.csvファイルを開いて、読み込みモードに設定する
                 $fp = fopen('data.csv', 'r');
                 // while文でCSVファイルのデータを1つずつ繰り返し読み込む
+                $i=0;
                 while($data = fgetcsv($fp)){
+                    echo $i;
+                    $i++;
                     mb_convert_variables("UTF-8", "SJIS-win", $data);
                     // test
+                    echo "data[0]:" . $data[0] . "<br/>";
+                    echo "_POST[name]:" . $_POST['name'] . "<br/>";
                     if($data[0]===$_POST['name']){
-                        echo "data[0]:" . $data[0] . "\r\n";
-                        echo "_POST[name]:" . $_POST['name'] . "\r\n";
+                        echo "一致<br/>";
                     }
+                    echo "data[1]:" . $data[1] . "<br/>";
+                    echo "_POST[age]:" . $_POST['age'] . "<br/>";
                     if ($data[1]===$_POST['age']){
-                        echo "data[1]:" . $data[1] . "\r\n";
-                        echo "_POST[age]:" . $_POST['age'] . "\r\n";
+                        echo "一致<br/>";
                     }
+                    echo "data[2]:" . $data[2] . "<br/>";
+                    echo "_POST[gender]:" . $_POST['gender'] . "<br/>";
                     if ($data[2]===$_POST['gender']){
-                        echo "data[2]:" . $data[2] . "\r\n";
-                        echo "_POST[gender]:" . $_POST['gender'] . "\r\n";
+                        echo "一致<br/>";
                     }
+                    echo "data[3]:" . $data[3] . "<br/>";
+                    echo "_POST[address]:" . $_POST['address'] . "<br/>";
                     if ($data[3]===$_POST['address']){
-                        echo "data[3]:" . $data[3] . "\r\n";
-                        echo "_POST[address]:" . $_POST['address'] . "\r\n";
+                        echo "一致<br/>";
                     }
+                    echo "data[4]:" . $data[4] . "<br/>";
+                    echo "_POST[telephone]:" . $_POST['telephone'] . "<br/>";
                     if ($data[4]===$_POST['telephone']){
-                        echo "data[4]:" . $data[4] . "\r\n";
-                        echo "_POST[telephone]:" . $_POST['telephone'] . "\r\n";
+                        echo "一致<br/>";
                     }
+                    echo "data[5]:" . $data[5] . "<br/>";
+                    echo "_POST[mail]:" . $_POST['mail'] . "<br/>";
                     if ($data[5]===$_POST['mail']){
-                        echo "data[5]:" . $data[5] . "\r\n";
-                        echo "_POST[mail]:" . $_POST['mail'] . "\r\n";
+                        echo "一致<br/>";
                     }
+                    echo "data[6]:" . $data[6] . "<br/>";
+                    echo "_POST[thoughts]:" . $_POST['thoughts'] . "<br/>";
                     if ($data[6]===$_POST['thoughts']){
-                        echo "data[6]:" . $data[6] . "\r\n";
-                        echo "_POST[thoughts]:" . $_POST['thoughts'] . "\r\n";
+                        echo "一致<br/>";
                     }
                     // テーブルセルに配列の値を格納
-                    /*
+
                     echo '<tr>';
                     for ($i=0;$i<count($data);$i++) {
                         echo "<td>" . $data[$i] . "</td>";
-                    }*/
-                    //echo '</tr>';
+                    }
+                    echo '</tr>';
                     if (isset($_POST["name"])) {
                         if(empty($_POST['name'] && $_POST['age'] && $_POST['gender'] &&
                         $_POST['address'] && $_POST['telephone'] && $_POST['mail'] && $_POST['thoughts'])){
