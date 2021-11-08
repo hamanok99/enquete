@@ -103,23 +103,26 @@
                     }
                     echo '</tr>';
                     }else if (isset($_GET["name"]) &&
-                    isset($_GET["age"]) &&
-                    isset($_GET["gender"]) &&
-                    isset($_GET["address"]) &&
-                    isset($_GET["telephone"]) &&
-                    isset($_GET["mail"]) &&
-                    isset($_GET["thoughts"]))
+                        isset($_GET["age"]) &&
+                        isset($_GET["gender"]) &&
+                        isset($_GET["address"]) &&
+                        isset($_GET["telephone"]) &&
+                        isset($_GET["mail"]) &&
+                        isset($_GET["thoughts"]))
                     {
-                        if(empty($_GET['name'] && $_GET['age'] && $_GET['gender'] &&
-                        $_GET['address'] && $_GET['telephone'] && $_GET['mail'] && $_GET['thoughts'])){
+                        if(empty($_GET['name'] && $_GET['age'] && $_GET['gender'] && $_GET['address'] && $_GET['telephone'] && $_GET['mail'] && $_GET['thoughts']))
+                        {
+                            echo "empty";
                             echo '<tr>';
                             for ($i=0;$i<count($data);$i++) {
-                            echo "<td>" . $data[$i] . "</td>";
+                                echo "<td>" . $data[$i] . "</td>";
                             }
                             echo '</tr>';
                         }
                     }
                 }
+                 // テーブルの閉じタグ
+                echo '</table>';
                 // 開いたファイルを閉じる
                 fclose($fp);
                 ?>
