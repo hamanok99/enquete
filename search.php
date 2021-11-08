@@ -70,6 +70,22 @@
                     <td><input class="contact-submit" type="submit" value="検索" /></td>
                 </tr>
             </table>
+            <?php
+            echo "name";
+            var_dump(isset($_POST["name"]));
+            echo "age";
+            var_dump(isset($_POST["age"]));
+            echo "gender";
+            var_dump(isset($_POST["gender"]));
+            echo "address";
+            var_dump(isset($_POST["address"]));
+            echo "telephone";
+            var_dump(isset($_POST["telephone"]));
+            echo "mail";
+            var_dump(isset($_POST["mail"]));
+            echo "thoughts";
+            var_dump(isset($_POST["thoughts"]));
+            ?>
             <table>
                 <?php
                 echo '<table border="1" class="result">
