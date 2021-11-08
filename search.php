@@ -94,36 +94,26 @@
                 while($data = fgetcsv($fp)){
                     mb_convert_variables("UTF-8", "SJIS-win", $data);
 
-                    if($data[0]===$_GET['name'] || $data[1]===$_GET['age'] || $data[2]===$_GET['gender'] || $data[3]===$_GET['address']
-                    || $data[4]===$_GET['telephone'] || $data[5]===$_GET['mail'] || $data[6]===$_GET['thoughts']){
+                    if($data[0]===$_POST['name'] || $data[1]===$_POST['age'] || $data[2]===$_POST['gender'] || $data[3]===$_POST['address']
+                    || $data[4]===$_POST['telephone'] || $data[5]===$_POST['mail'] || $data[6]===$_POST['thoughts']){
                     // テーブルセルに配列の値を格納
                     echo '<tr>';
                     for ($i=0;$i<count($data);$i++) {
                         echo "<td>" . $data[$i] . "</td>";
                     }
                     echo '</tr>';
-                    }else if (
-                        isset($_GET["name"]) &&
-                        isset($_GET["age"]) &&
-                        isset($_GET["gender"]) &&
-                        isset($_GET["address"]) &&
-                        isset($_GET["telephone"]) &&
-                        isset($_GET["mail"]) &&
-                        isset($_GET["test"]))
-                    {
-                        if(empty($_GET['name'] && $_GET['age'] && $_GET['gender'] && $_GET['address'] && $_GET['telephone'] && $_GET['mail'] && $_GET['thoughts']))
-                        {
-                            echo "empty";
+                    }else if (isset($_POST["name"], $_POST["age"], $_POST["gender"],
+                    $_POST["address"], $_POST["telephone"], $_POST["mail"], $_POST["thoughts"])) {
+                        if(empty($_POST['name'] && $_POST['age'] && $_POST['gender'] &&
+                        $_POST['address'] && $_POST['telephone'] && $_POST['mail'] && $_POST['thoughts'])){
                             echo '<tr>';
                             for ($i=0;$i<count($data);$i++) {
-                                echo "<td>" . $data[$i] . "</td>";
+                            echo "<td>" . $data[$i] . "</td>";
                             }
                             echo '</tr>';
                         }
                     }
                 }
-                 // テーブルの閉じタグ
-                echo '</table>';
                 // 開いたファイルを閉じる
                 fclose($fp);
                 ?>
