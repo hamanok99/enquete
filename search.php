@@ -52,10 +52,18 @@
                 <tr>
                     <th class="contact-item">感想</th>
                     <td class="contact-body">
+                        <input type="radio" name="test" value="good" />
+                        <span class="contact-thoughts-txt">良い</span>
+                        <input type="radio" name="test" value="normal" />
+                        <span class="contact-thoughts-txt">普通</span>
+                        <input type="radio" name="test" value="bad" />
+                        <span class="contact-thoughts-txt">悪い</span>
+
                     <input type="radio" name="kisetsu" value="春" checked>春<br>
 	<input type="radio" name="kisetsu" value="夏">夏<br>
 	<input type="radio" name="kisetsu" value="秋">秋<br>
-                    </td>
+
+                </td>
                 </tr>
                 <tr>
                     <td><input class="contact-submit" type="submit" value="検索" /></td>
@@ -97,7 +105,7 @@
                         isset($_GET["address"]) &&
                         isset($_GET["telephone"]) &&
                         isset($_GET["mail"]) &&
-                        isset($_GET["kisetsu"]))
+                        isset($_GET["test"]))
                     {
                         if(empty($_GET['name'] && $_GET['age'] && $_GET['gender'] && $_GET['address'] && $_GET['telephone'] && $_GET['mail'] && $_GET['thoughts']))
                         {
