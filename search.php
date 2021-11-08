@@ -89,7 +89,7 @@
                 // while文でCSVファイルのデータを1つずつ繰り返し読み込む
                 while($data = fgetcsv($fp)){
                     mb_convert_variables("UTF-8", "SJIS-win", $data);
-                    echo $data[6];
+                    echo var_dump($data);
 
                     if($data[0]===$_POST['name'] || $data[1]===$_POST['age'] || $data[2]===$_POST['gender'] || $data[3]===$_POST['address']
                     || $data[4]===$_POST['telephone'] || $data[5]===$_POST['mail'] || $data[6]===$_POST['thoughts']){
