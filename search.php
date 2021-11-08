@@ -71,20 +71,7 @@
                 </tr>
             </table>
             <?php
-            echo "name";
-            var_dump(isset($_GET["name"]));
-            echo "age";
-            var_dump(isset($_GET["age"]));
-            echo "gender";
-            var_dump(isset($_GET["gender"]));
-            echo "address";
-            var_dump(isset($_GET["address"]));
-            echo "telephone";
-            var_dump(isset($_GET["telephone"]));
-            echo "mail";
-            var_dump(isset($_GET["mail"]));
-            echo "thoughts";
-            var_dump(isset($_GET["thoughts"]));
+            var_dump(isset($_GET));
             ?>
             <table>
                 <?php
