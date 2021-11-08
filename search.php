@@ -7,7 +7,7 @@
 <body>
     <div class ="contact">
     <h1 class="contact-ttl">検索</h1>
-        <form action="search.php" method="post">
+        <form action="search.php" method="get">
             <table class="contact-table">
                 <tr>
                     <th class="contact-item">名前</th>
@@ -72,19 +72,19 @@
             </table>
             <?php
             echo "name";
-            var_dump(isset($_POST["name"]));
+            var_dump(isset($_GET["name"]));
             echo "age";
-            var_dump(isset($_POST["age"]));
+            var_dump(isset($_GET["age"]));
             echo "gender";
-            var_dump(isset($_POST["gender"]));
+            var_dump(isset($_GET["gender"]));
             echo "address";
-            var_dump(isset($_POST["address"]));
+            var_dump(isset($_GET["address"]));
             echo "telephone";
-            var_dump(isset($_POST["telephone"]));
+            var_dump(isset($_GET["telephone"]));
             echo "mail";
-            var_dump(isset($_POST["mail"]));
+            var_dump(isset($_GET["mail"]));
             echo "thoughts";
-            var_dump(isset($_POST["thoughts"]));
+            var_dump(isset($_GET["thoughts"]));
             ?>
             <table>
                 <?php
@@ -104,8 +104,8 @@
                 while($data = fgetcsv($fp)){
                     mb_convert_variables("UTF-8", "SJIS-win", $data);
 
-                    if($data[0]===$_POST['name'] || $data[1]===$_POST['age'] || $data[2]===$_POST['gender'] || $data[3]===$_POST['address']
-                    || $data[4]===$_POST['telephone'] || $data[5]===$_POST['mail'] || $data[6]===$_POST['thoughts']){
+                    if($data[0]===$_GET['name'] || $data[1]===$_GET['age'] || $data[2]===$_GET['gender'] || $data[3]===$_GET['address']
+                    || $data[4]===$_GET['telephone'] || $data[5]===$_GET['mail'] || $data[6]===$_GET['thoughts']){
                     // テーブルセルに配列の値を格納
                     echo '<tr>';
                     for ($i=0;$i<count($data);$i++) {
@@ -113,15 +113,15 @@
                     }
                     echo '</tr>';
                     }else if (
-                        isset($_POST["name"]) &&
-                        isset($_POST["age"]) &&
-                        isset($_POST["gender"]) &&
-                        isset($_POST["address"]) &&
-                        isset($_POST["telephone"]) &&
-                        isset($_POST["mail"]) &&
-                        isset($_POST["thoughts"]))
+                        isset($_GET["name"]) &&
+                        isset($_GET["age"]) &&
+                        isset($_GET["gender"]) &&
+                        isset($_GET["address"]) &&
+                        isset($_GET["telephone"]) &&
+                        isset($_GET["mail"]) &&
+                        isset($_GET["thoughts"]))
                     {
-                        if(empty($_POST['name'] && $_POST['age'] && $_POST['gender'] && $_POST['address'] && $_POST['telephone'] && $_POST['mail'] && $_POST['thoughts']))
+                        if(empty($_GET['name'] && $_GET['age'] && $_GET['gender'] && $_GET['address'] && $_GET['telephone'] && $_GET['mail'] && $_GET['thoughts']))
                         {
                             echo "empty";
                             echo '<tr>';
