@@ -2,99 +2,117 @@
 <html>
 <head>
 <meta charset="utf-8">
+<link rel="stylesheet" href="enquete.css" media="all" />
 <title>検索画面</title>
-<style type="text/css">
-table, th, td {
-  border-collapse: collapse;
-  border: 1px solid #ccc;
-  line-height: 1.5;
-}
-
-table.type06 th {
-  width: 150px;
-  padding: 10px;
-  font-weight: bold;
-  vertical-align: top;
-  background: #3f3f3f;
-  color: #ffffff;
-}
-table.type06 td {
-  width: 350px;
-  padding: 10px;
-  vertical-align: top;
-}
-</style>
 </head>
 <body>
-<form action="search.php" method="POST" name='enquete'>
-<table>
-    <tr>
-        <td>氏名</td>
-        <td><input type="text" name="name" value=""></td>
-    </tr>
-    <tr>
-        <td>年齢</td>
-        <td><input type="text" name="age" value="">歳</td>
-    </tr>
-    <tr>
-        <td>性別</td>
-        <td><select name="gender"><option>男性</option><option>女性</option></select></td>
-    </tr>
-    <tr>
-        <td>住所</td>
-        <td><input type="text" name="address" value=""></td>
-    </tr>
-    <tr>
-        <td>電話番号</td>
-        <td><input type="text" name="telephone" value=""></td>
-    </tr>
-    <tr>
-        <td>メールアドレス</td>
-        <td><input type="text" name="mail" value=""></td>
-    </tr>
-    <tr>
-        <td>感想</td>
-        <td><input type="radio" name="thoughts" value="good">良い<input type="radio" name="thoughts" value="normal">普通<input type="radio" name="thoughts" value="bad">悪い</td>
-    </tr>
-	<tr>
-		<td><button type="submit">検索</button></td>
-	</tr>
-</table>
-<table>
-<?php
-// テーブルタグを作成し、テーブルヘッダーで見出しを作る
-echo '<table class="type06">
-    <tr>
-    <th>氏名</th>
-    <th>年齢</th>
-    <th>性別</th>
-    <th>住所</th>
-    <th>電話番号</th>
-    <th>メールアドレス</th>
-    <th>感想</th>
-    </tr>
-    <tr>
-        <td>山田</td>
-        <td>50</td>
-        <td>男性</td>
-        <td>熊本県</td>
-        <td>00011112222</td>
-        <td>test@test.com</td>
-        <td>良い</td>
-    </tr>
-    <tr>
-        <td>田中</td>
-        <td>30</td>
-        <td>男性</td>
-        <td>東京都</td>
-        <td>08011112222</td>
-        <td>test@co.jp</td>
-        <td>普通</td>
-    </tr>
-    </table>';
+    <div class ="contact">
+    <h1 class="contact-ttl">検索</h1>
+        <form action="search.php" method="post">
+            <table class="contact-table">
+                <tr>
+                    <th class="contact-item">名前</th>
+                    <td class="contact-body">
+                        <input type="text" name="name" class="form-text" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="contact-item">年齢</th>
+                    <td class="contact-body">
+                        <input type="text" name="age" class="form-age-text" value="">歳
+                    </td>
+                </tr>
+                <tr>
+                    <th class="contact-item">性別</th>
+                    <td class="contact-body">
+                        <select name="gender" class="form-select">
+                            <option hidden>選択してください</option>
 
-?>
-</table>
-</form>
+                            <option>男性</option>
+                            <option>女性</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="contact-item">住所</th>
+                    <td class="contact-body">
+                        <input type="text" name="address" class="form-text" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="contact-item">電話番号</th>
+                    <td class="contact-body">
+                        <input type="text" name="telephone" class="form-text" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="contact-item">メ―ルアドレス</th>
+                    <td class="contact-body">
+                        <input type="text" name="mail" class="form-text" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="contact-item">感想</th>
+                    <td class="contact-body">
+                    <label class="contact-thoughts">
+                        <input type="radio" name="thoughts" value="good" />
+                        <span class="contact-thoughts-txt">良い</span>
+                    </label>
+                    <label class="contact-thoughts">
+                        <input type="radio" name="thoughts" value="normal" />
+                        <span class="contact-thoughts-txt">普通</span>
+                    </label>
+                    <label class="contact-thoughts">
+                        <input type="radio" name="thoughts" value="bad" />
+                        <span class="contact-thoughts-txt">悪い</span>
+                    </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input class="contact-submit" type="submit" value="検索" /></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th>氏名</th>
+                    <th>年齢</th>
+                    <th>性別</th>
+                    <th>住所</th>
+                    <th>電話番号</th>
+                    <th>メールアドレス</th>
+                    <th>感想</th>
+                </tr>
+                <?php
+                // test.csvファイルを開いて、読み込みモードに設定する
+                $fp = fopen('data.csv', 'r');
+                // while文でCSVファイルのデータを1つずつ繰り返し読み込む
+                while($data = fgetcsv($fp)){
+                    mb_convert_variables("UTF-8", "SJIS-win", $data);
+
+                    if($data[0]===$_POST['name'] || $data[1]===$_POST['age'] || $data[2]===$_POST['gender'] || $data[3]===$_POST['address']
+                    || $data[4]===$_POST['telephone'] || $data[5]===$_POST['mail'] || $data[6]===$_POST['thoughts']){
+                    // テーブルセルに配列の値を格納
+                    echo '<tr>';
+                    for ($i=0;$i<count($data);$i++) {
+                        echo "<td>" . $data[$i] . "</td>";
+                    }
+                    echo '</tr>';
+                    }else if (isset($_POST["name"])) {
+                        if(empty($_POST['name'] && $_POST['age'] && $_POST['gender'] &&
+                        $_POST['address'] && $_POST['telephone'] && $_POST['mail'] && $_POST['thoughts'])){
+                            echo '<tr>';
+                            for ($i=0;$i<count($data);$i++) {
+                            echo "<td>" . $data[$i] . "</td>";
+                            }
+                            echo '</tr>';
+                        }
+                    }
+                }
+                // 開いたファイルを閉じる
+                fclose($fp);
+                ?>
+            </table>
+        </form>
+    </div>
 </body>
 </html>
