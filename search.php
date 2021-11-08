@@ -92,32 +92,32 @@
                     echo "2:" . $data[6];
 
                     if($data[0]===$_POST['name']){
-                        echo "data[0]:" . $data[0];
-                        echo "$_POST[name]:" . $_POST['name'];
+                        echo "data[0]:" . $data[0] . "\r\n";
+                        echo "_POST[name]:" . $_POST['name'] . "\r\n";
                     }
                     if ($data[1]===$_POST['age']){
-                        echo "data[1]:" . $data[1];
-                        echo "$_POST[age]:" . $_POST['age'];
+                        echo "data[1]:" . $data[1] . "\r\n";
+                        echo "_POST[age]:" . $_POST['age'] . "\r\n";
                     }
                     if ($data[2]===$_POST['gender']){
-                        echo "data[2]:" . $data[2];
-                        echo "$_POST[gender]:" . $_POST['gender'];
+                        echo "data[2]:" . $data[2] . "\r\n";
+                        echo "_POST[gender]:" . $_POST['gender'] . "\r\n";
                     }
                     if ($data[3]===$_POST['address']){
-                        echo "data[3]:" . $data[3];
-                        echo "$_POST[address]:" . $_POST['address'];
+                        echo "data[3]:" . $data[3] . "\r\n";
+                        echo "_POST[address]:" . $_POST['address'] . "\r\n";
                     }
                     if ($data[4]===$_POST['telephone']){
-                        echo "data[4]:" . $data[4];
-                        echo "$_POST[telephone]:" . $_POST['telephone'];
+                        echo "data[4]:" . $data[4] . "\r\n";
+                        echo "_POST[telephone]:" . $_POST['telephone'] . "\r\n";
                     }
                     if ($data[5]===$_POST['mail']){
-                        echo "data[5]:" . $data[5];
-                        echo "$_POST[mail]:" . $_POST['mail'];
+                        echo "data[5]:" . $data[5] . "\r\n";
+                        echo "_POST[mail]:" . $_POST['mail'] . "\r\n";
                     }
                     if ($data[6]===$_POST['thoughts']){
-                        echo "data[6]:" . $data[6];
-                        echo "$_POST[thoughts]:" . $_POST['thoughts'];
+                        echo "data[6]:" . $data[6] . "\r\n";
+                        echo "_POST[thoughts]:" . $_POST['thoughts'] . "\r\n";
                     }
                     // テーブルセルに配列の値を格納
                     /*
