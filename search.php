@@ -25,10 +25,10 @@
                     <th class="contact-item">性別</th>
                     <td class="contact-body">
                         <select name="gender" class="form-select">
-                            <option hidden>選択してください</option>
+                            <option value="" hidden>選択してください</option>
 
-                            <option>男性</option>
-                            <option>女性</option>
+                            <option value="man">男性</option>
+                            <option value="woman">女性</option>
                         </select>
                     </td>
                 </tr>
