@@ -105,6 +105,8 @@
                               isset($_POST["mail"]) &&
                               isset($_POST["thoughts"]))
                               {
+                                  echo "setOK";
+                                  echo $_POST['name'] . $_POST['age'] . $_POST['gender'] . $_POST['address'] . $_POST['telephone'] . $_POST['mail'] . $_POST['thoughts'];
                                 if (empty($_POST['name']) &&
                                     empty($_POST['age']) &&
                                     empty($_POST['gender']) &&
@@ -113,6 +115,7 @@
                                     empty($_POST['mail']) &&
                                     empty($_POST['thoughts']))
                                     {
+                                        echo "empty";
                                         echo '<tr>';
                                         for ($i=0;$i<count($data);$i++) {
                                         echo "<td>" . $data[$i] . "</td>";
