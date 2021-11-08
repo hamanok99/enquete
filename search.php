@@ -86,10 +86,10 @@
                 // test.csvファイルを開いて、読み込みモードに設定する
                 $fp = fopen('data.csv', 'r');
                 // while文でCSVファイルのデータを1つずつ繰り返し読み込む
-                $i=0;
+                $k=0;
                 while($data = fgetcsv($fp)){
-                    echo $i;
-                    $i++;
+                    echo $k;
+                    $k++;
                     mb_convert_variables("UTF-8", "SJIS-win", $data);
                     // test
                     if($data[0]===$_POST['name']){
