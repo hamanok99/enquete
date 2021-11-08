@@ -65,8 +65,7 @@
                         <span class="contact-thoughts-txt">悪い</span>
                     </label>
                     <label class="contact-thoughts">
-                        <input type="radio" name="thoughts" value="" />
-                        <span class="contact-thoughts-txt"　checked="checked" style="display:none;"></span>
+                        <input type="radio" name="thoughts" value="" checked="checked" style="display:none;"/>
                     </label>
                 </td>
                 </tr>
