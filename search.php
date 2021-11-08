@@ -100,13 +100,8 @@
                               {
                                   echo "setOK";
                                   echo $_POST['name'] . $_POST['age'] . $_POST['gender'] . $_POST['address'] . $_POST['telephone'] . $_POST['mail'] . $_POST['thoughts'];
-                                if (empty($_POST['name']) &&
-                                    empty($_POST['age']) &&
-                                    empty($_POST['gender']) &&
-                                    empty($_POST['address']) &&
-                                    empty($_POST['telephone']) &&
-                                    empty($_POST['mail']) &&
-                                    empty($_POST['thoughts']))
+                                  if(empty($_POST['name'] && $_POST['age'] && $_POST['gender'] &&
+                                  $_POST['address'] && $_POST['telephone'] && $_POST['mail'] && $_POST['thoughts']))
                                     {
                                         echo "empty";
                                         echo '<tr>';
