@@ -126,7 +126,7 @@
                         echo "<td>" . $data[$i] . "</td>";
                     }*/
                     echo '</tr>';
-                    }if (isset($_POST["name"])) {
+                    if (isset($_POST["name"])) {
                         if(empty($_POST['name'] && $_POST['age'] && $_POST['gender'] &&
                         $_POST['address'] && $_POST['telephone'] && $_POST['mail'] && $_POST['thoughts'])){
                             echo '<tr>';
