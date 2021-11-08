@@ -96,6 +96,11 @@
                     echo "_POST[name]:" . $_POST['name'] . "<br/>";
                     if($data[0]===$_POST['name']){
                         echo "一致<br/>";
+                        echo '<tr>';
+                        for ($i=0;$i<count($data);$i++) {
+                            echo "<td>" . $data[$i] . "</td>";
+                        }
+                        echo '</tr>';
                     }
                     echo "data[1]:" . $data[1] . "<br/>";
                     echo "_POST[age]:" . $_POST['age'] . "<br/>";
@@ -129,11 +134,8 @@
                     }
                     // テーブルセルに配列の値を格納
 
-                    echo '<tr>';
-                    for ($i=0;$i<count($data);$i++) {
-                        echo "<td>" . $data[$i] . "</td>";
-                    }
-                    echo '</tr>';
+
+/*
                     if (isset($_POST["name"])) {
                         if(empty($_POST['name'] && $_POST['age'] && $_POST['gender'] &&
                         $_POST['address'] && $_POST['telephone'] && $_POST['mail'] && $_POST['thoughts'])){
@@ -145,6 +147,7 @@
                         }
                     }
                 }
+                */
                 // 開いたファイルを閉じる
                 fclose($fp);
                 ?>
