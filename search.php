@@ -116,56 +116,20 @@
                         //入力項目と登録項目が完全一致の場合一覧表示
                         else
                         {
-                            echo '<tr>';
-                            if(strpos($data[0], $NAME) !== false){
-                                echo 'name一致<br/>';
-                                echo '<td>' . $data[0] . '</td>';
-                            } else {
-                                echo '<td></td>';
-                            }
-
-                            if($data[1] === $AGE){
-                                echo 'age一致<br/>';
-                                echo '<td>' . $data[1] . '</td>';
-                            } else {
-                                echo '<td></td>';
-                            }
-
-                            if(strpos($data[2], $GENDER) !== false){
-                                echo 'gender一致<br/>';
-                                echo '<td>' . $data[2] . '</td>';
-                            } else {
-                                echo '<td></td>';
-                            }
-
-                            if(strpos($data[3], $ADDRESS) !== false){
-                                echo 'address一致<br/>';
-                                echo '<td>' . $data[3] . '</td>';
-                            } else {
-                                echo '<td></td>';
-                            }
-
-                            if(strpos($data[4], $TELEPHONE) !== false){
-                                echo 'tel一致<br/>';
-                                echo '<td>' . $data[4] . '</td>';
-                            } else {
-                                echo '<td></td>';
-                            }
-
-                            if(strpos($data[5], $MAIL) !== false){
-                                echo 'mail一致<br/>';
-                                echo '<td>' . $data[5] . '</td>';
-                            } else {
-                                echo '<td></td>';
-                            }
-
-                            if(strpos($data[6], $THOUGHTS) !== false){
-                                echo 'TH一致<br/>';
-                                echo '<td>' . $data[6] . '</td>';
-                            } else {
-                                echo '<td></td>';
-                            }
-                            echo '</tr>';
+                            if(((empty($NAME) === false) && (strpos($data[0], $NAME) !== false)) &&
+                               ((empty($AGE) === false) && ($data[1] == $AGE)) &&
+                               ((empty($GENDER) === false) && (strpos($data[2], $GENDER) !== false)) &&
+                               ((empty($ADDRESS) === false) && (strpos($data[3], $ADDRESS) !== false)) &&
+                               ((empty($TELEPHONE) === false) && (strpos($data[4], $TELEPHONE) !== false)) &&
+                               ((empty($MAIL) === false) && (strpos($data[5], $MAIL) !== false)) &&
+                               ((empty($THOUGHTS) === false) && (strpos($data[6], $THOUGHTS) !== false)))
+                               {
+                                    echo '<tr>';
+                                    for ($i=0;$i<count($data);$i++) {
+                                    echo "<td>" . $data[$i] . "</td>";
+                                    }
+                                    echo '</tr>';
+                               }
                         }
                     }
                 }
