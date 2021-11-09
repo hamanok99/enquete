@@ -157,14 +157,14 @@
                             // メールが入力されている
                             if (empty($MAIL) === false) {
                                 // 部分一致しない
-                                if (strpos($data[5], $MAIL) !== false) {
+                                if (strpos($data[5], $MAIL) === false) {
                                     $display = false;
                                 }
                             }
                             // 感想が入力されている
                             if (empty($THOUGHTS) === false) {
-                                // 完全一致しない
-                                if ($data[6] !== $THOUGHTS) {
+                                // 完全一致する
+                                if ($data[6] === $THOUGHTS) {
                                     $display = false;
                                 }
                             }
