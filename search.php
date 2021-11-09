@@ -116,30 +116,31 @@
                     if(strpos($data[0], $NAME) !== false){
                         echo $data[0] . ":" . $NAME . "<br/>";
                         echo 'name一致' . "<br/>";
-                    }else if($data[1] == $AGE){
+                    }if($data[1] == $AGE){
                         echo $data[1] . ":" . $AGE . "<br/>";
                         echo 'age一致' . "<br/>";
-                    }else if(strpos($data[2], $GENDER) !== false){
+                    }if(strpos($data[2], $GENDER) !== false){
                         echo $data[2] . ":" . $GENDER . "<br/>";
                         echo 'gender一致' . "<br/>";
-                    }else if(strpos($data[3], $ADDRESS) !== false){
+                    }if(strpos($data[3], $ADDRESS) !== false){
                         echo $data[3] . ":" . $ADDRESS . "<br/>";
                         echo 'address一致' . "<br/>";
-                    }else if(strpos($data[4], $TELEPHONE) !== false){
+                    }if(strpos($data[4], $TELEPHONE) !== false){
                         echo $data[4] . ":" . $TELEPHONE . "<br/>";
                         echo 'telephone一致' . "<br/>";
-                    }else if(strpos($data[5], $MAIL) !== false){
+                    }if(strpos($data[5], $MAIL) !== false){
                         echo $data[5] . ":" . $MAIL . "<br/>";
                         echo 'mail一致' . "<br/>";
-                    }else if(strpos($data[6], $THOUGHTS) !== false){
+                    }if(strpos($data[6], $THOUGHTS) !== false){
                         echo $data[6] . ":" . $THOUGHTS . "<br/>";
                         echo 'th一致' . "<br/>";
                     }
 
 
                     //入力項目と登録項目が完全一致の場合一覧表示
-                    if(strpos($data[0], $NAME) !== false || $data[1] == $AGE || strpos($data[2], $GENDER) !== false || strpos($data[3], $ADDRESS) !== false
-                    || strpos($data[4], $TELEPHONE) !== false || strpos($data[5], $MAIL) !== false || strpos($data[6], $THOUGHTS) !== false){
+                    if((strpos($data[0], $NAME) !== false) || ($data[1] == $AGE) || (strpos($data[2], $GENDER) !== false) || (strpos($data[3], $ADDRESS) !== false)
+                    || (strpos($data[4], $TELEPHONE) !== false) || (strpos($data[5], $MAIL) !== false) || (strpos($data[6], $THOUGHTS) !== false))
+                    {
 
                         // テーブルセルに配列の値を格納
                         echo '<tr>';
