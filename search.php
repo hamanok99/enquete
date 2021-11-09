@@ -130,8 +130,7 @@
                     }
 
                     // 全ての条件が空白の場合
-                    if (isset($_GET["name"], $_GET["age"], $_GET["gender"],
-                        $_GET["address"], $_GET["telephone"], $_GET["mail"], $_GET["thoughts"])) {
+                    if (isset($_GET["name"], $_GET["age"], $_GET["gender"], $_GET["address"], $_GET["telephone"], $_GET["mail"], $_GET["thoughts"])) {
 
                         if(empty($_GET['name']) && empty($_GET['age']) && empty($_GET['gender']) && empty($_GET['address']) &&
                             empty($_GET['telephone']) && empty($_GET['mail']) && empty($_GET['thoughts'])){
@@ -160,62 +159,7 @@
                             echo "<td>" . $data[$i] . "</td>";
                         }
                         echo '</tr>';
-
-                    // }else if(strpos($data[1], $AGE) !== false){
-
-                    //     // テーブルセルに配列の値を格納
-                    //     echo '<tr>';
-                    //     for ($i=0;$i<count($data);$i++) {
-                    //         echo "<td>" . $data[$i] . "</td>";
-                    //     }
-                    //     echo '</tr>';
-
-                    // }else if(strpos($data[2], $GENDER) !== false){
-
-                    //     // テーブルセルに配列の値を格納
-                    //     echo '<tr>';
-                    //     for ($i=0;$i<count($data);$i++) {
-                    //         echo "<td>" . $data[$i] . "</td>";
-                    //     }
-                    //     echo '</tr>';
-
-                    // }else if(strpos($data[3], $ADDRESS) !== false){
-
-                    //     // テーブルセルに配列の値を格納
-                    //     echo '<tr>';
-                    //     for ($i=0;$i<count($data);$i++) {
-                    //         echo "<td>" . $data[$i] . "</td>";
-                    //     }
-                    //     echo '</tr>';
-
-                    // }else if(strpos($data[4], $TELEPHONE) !== false){
-
-                    //     // テーブルセルに配列の値を格納
-                    //     echo '<tr>';
-                    //     for ($i=0;$i<count($data);$i++) {
-                    //         echo "<td>" . $data[$i] . "</td>";
-                    //     }
-                    //     echo '</tr>';
-
-                    // }else if(strpos($data[5], $MAIL) !== false){
-
-                    //     // テーブルセルに配列の値を格納
-                    //     echo '<tr>';
-                    //     for ($i=0;$i<count($data);$i++) {
-                    //         echo "<td>" . $data[$i] . "</td>";
-                    //     }
-                    //     echo '</tr>';
-
-                    // }else if(strpos($data[6], $THOUGHTS) !== false){
-
-                    //     // テーブルセルに配列の値を格納
-                    //     echo '<tr>';
-                    //     for ($i=0;$i<count($data);$i++) {
-                    //         echo "<td>" . $data[$i] . "</td>";
-                    //     }
-                    //     echo '</tr>';
-
-
+                    }
                 }
 
                  // テーブルの閉じタグ
