@@ -104,37 +104,9 @@
                     //UTF-8に変換
                     mb_convert_variables("UTF-8", "SJIS-win", $data);
 
-
-
-                    if(strpos($data[0], $NAME) !== false){
-                        echo $data[0] . ":" . $NAME . "<br/>";
-                        echo 'name一致' . "<br/>";
-                    }if($data[1] == $AGE){
-                        echo $data[1] . ":" . $AGE . "<br/>";
-                        echo 'age一致' . "<br/>";
-                    }if(strpos($data[2], $GENDER) !== false){
-                        echo $data[2] . ":" . $GENDER . "<br/>";
-                        echo 'gender一致' . "<br/>";
-                    }if(strpos($data[3], $ADDRESS) !== false){
-                        echo $data[3] . ":" . $ADDRESS . "<br/>";
-                        echo 'address一致' . "<br/>";
-                    }if(strpos($data[4], $TELEPHONE) !== false){
-                        echo $data[4] . ":" . $TELEPHONE . "<br/>";
-                        echo 'telephone一致' . "<br/>";
-                    }if(strpos($data[5], $MAIL) !== false){
-                        echo $data[5] . ":" . $MAIL . "<br/>";
-                        echo 'mail一致' . "<br/>";
-                    }if(strpos($data[6], $THOUGHTS) !== false){
-                        echo $data[6] . ":" . $THOUGHTS . "<br/>";
-                        echo 'th一致' . "<br/>";
-                    }
-
                     // 全ての条件が空白の場合
                     if (isset($_GET["name"], $_GET["age"], $_GET["gender"], $_GET["address"], $_GET["telephone"], $_GET["mail"], $_GET["thoughts"])) {
-
-                        if(empty($_GET['name']) && empty($_GET['age']) && empty($_GET['gender']) && empty($_GET['address']) &&
-                            empty($_GET['telephone']) && empty($_GET['mail']) && empty($_GET['thoughts'])){
-
+                        if(empty($_GET['name']) && empty($_GET['age']) && empty($_GET['gender']) && empty($_GET['address']) && empty($_GET['telephone']) && empty($_GET['mail']) && empty($_GET['thoughts'])){
                             echo '<tr>';
                             for ($i=0;$i<count($data);$i++) {
                             echo "<td>" . $data[$i] . "</td>";
@@ -143,20 +115,49 @@
                         }
                     }
                     //入力項目と登録項目が完全一致の場合一覧表示
-                    else if(
-                        (strpos($data[0], $NAME) !== false) &&
-                        ($data[1] == $AGE) &&
-                        (strpos($data[2], $GENDER) !== false) &&
-                        (strpos($data[3], $ADDRESS) !== false) &&
-                        (strpos($data[4], $TELEPHONE) !== false) &&
-                        (strpos($data[5], $MAIL) !== false) &&
-                        (strpos($data[6], $THOUGHTS) !== false))
+                    else
                     {
-
-                        // テーブルセルに配列の値を格納
                         echo '<tr>';
-                        for ($i=0;$i<count($data);$i++) {
-                            echo "<td>" . $data[$i] . "</td>";
+                        if($data[0] === $NAME){
+                            echo '<td>' . $data[0] . '</td>';
+                        } else {
+                            echo '<td></td>';
+                        }
+
+                        if($data[1] === $AGE){
+                            echo '<td>' . $data[1] . '</td>';
+                        } else {
+                            echo '<td></td>';
+                        }
+
+                        if($data[2] === $GENDER){
+                            echo '<td>' . $data[2] . '</td>';
+                        } else {
+                            echo '<td></td>';
+                        }
+
+                        if($data[3] === $ADDRESS){
+                            echo '<td>' . $data[3] . '</td>';
+                        } else {
+                            echo '<td></td>';
+                        }
+
+                        if($data[4] === $TELEPHONE){
+                            echo '<td>' . $data[4] . '</td>';
+                        } else {
+                            echo '<td></td>';
+                        }
+
+                        if($data[5] === $MAIL){
+                            echo '<td>' . $data[5] . '</td>';
+                        } else {
+                            echo '<td></td>';
+                        }
+
+                        if($data[6] === $THOUGHTS){
+                            echo '<td>' . $data[6] . '</td>';
+                        } else {
+                            echo '<td></td>';
                         }
                         echo '</tr>';
                     }
