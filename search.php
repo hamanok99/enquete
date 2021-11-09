@@ -24,11 +24,11 @@
                 <tr>
                     <th class="contact-item">性別</th>
                     <td class="contact-body">
-                        <select name="gender" class="form-select">
-                            <option value="" hidden>選択してください</option>
-                            <option value="man">男性</option>
-                            <option value="woman">女性</option>
-                        </select>
+                    <select name="gender" class="form-select">
+                        <option value="" hidden>選択してください</option>
+                        <option value="man">男性</option>
+                        <option value="woman">女性</option>
+                    </select>
                     </td>
                 </tr>
                 <tr>
@@ -67,26 +67,23 @@
                     <label class="contact-thoughts">
                         <input type="radio" name="thoughts" value="" checked="checked" style="display:none;"/>
                     </label>
-                </td>
+                    </td>
                 </tr>
                 <tr>
                     <td><input class="contact-submit" type="submit" value="検索" /></td>
                 </tr>
             </table>
-            <?php
-            var_dump(isset($_GET));
-            ?>
             <table>
                 <?php
-                echo '<table border="1" class="result">
+                echo '<table class="result">
                 <tr>
-                    <th>氏名</th>
-                    <th>年齢</th>
-                    <th>性別</th>
-                    <th>住所</th>
-                    <th>電話番号</th>
-                    <th>メールアドレス</th>
-                    <th>感想</th>
+                <th>氏名</th>
+                <th>年齢</th>
+                <th>性別</th>
+                <th>住所</th>
+                <th>電話番号</th>
+                <th>メールアドレス</th>
+                <th>感想</th>
                 </tr>';
                 // test.csvファイルを開いて、読み込みモードに設定する
                 $fp = fopen('data.csv', 'r');
@@ -102,20 +99,11 @@
                         echo "<td>" . $data[$i] . "</td>";
                     }
                     echo '</tr>';
-                    }else if (isset($_GET["name"]) &&
-                        isset($_GET["age"]) &&
-                        isset($_GET["gender"]) &&
-                        isset($_GET["address"]) &&
-                        isset($_GET["telephone"]) &&
-                        isset($_GET["mail"]) &&
-                        isset($_GET["thoughts"]))
-                    {
-                        if(empty($_GET['name'] && $_GET['age'] && $_GET['gender'] && $_GET['address'] && $_GET['telephone'] && $_GET['mail'] && $_GET['thoughts']))
-                        {
-                            echo "empty";
+                    }else if (isset($_GET["name"], $_GET["age"], $_GET["gender"], $_GET["address"], $_GET["telephone"], $_GET["mail"], $_GET["thoughts"])) {
+                        if(empty($_GET['name']) && empty($_GET['age']) && empty($_GET['gender']) && empty($_GET['address']) && empty($_GET['telephone']) && empty($_GET['mail']) && empty($_GET['thoughts'])){
                             echo '<tr>';
                             for ($i=0;$i<count($data);$i++) {
-                                echo "<td>" . $data[$i] . "</td>";
+                            echo "<td>" . $data[$i] . "</td>";
                             }
                             echo '</tr>';
                         }
@@ -123,6 +111,7 @@
                 }
                  // テーブルの閉じタグ
                 echo '</table>';
+
                 // 開いたファイルを閉じる
                 fclose($fp);
                 ?>
@@ -131,4 +120,3 @@
     </div>
 </body>
 </html>
-

@@ -51,7 +51,12 @@ function checkNumber(){
     </tr>
     <tr>
         <td>性別</td>
-        <td><select name="gender"><option selected="selected">男性</option><option>女性</option></select></td>
+        <td>
+            <select name="gender" class="form-select">
+                <option value="man">男性</option>
+                <option value="woman">女性</option>
+            </select>
+        </td>
     </tr>
     <tr>
         <td>住所</td>
