@@ -116,20 +116,66 @@
                         //入力項目と登録項目が完全一致の場合一覧表示
                         else
                         {
-                            if(((empty($NAME) === false) && (strpos($data[0], $NAME) !== false)) &&
-                               ((empty($AGE) === false) && ($data[1] == $AGE)) &&
-                               ((empty($GENDER) === false) && (strpos($data[2], $GENDER) !== false)) &&
-                               ((empty($ADDRESS) === false) && (strpos($data[3], $ADDRESS) !== false)) &&
-                               ((empty($TELEPHONE) === false) && (strpos($data[4], $TELEPHONE) !== false)) &&
-                               ((empty($MAIL) === false) && (strpos($data[5], $MAIL) !== false)) &&
-                               ((empty($THOUGHTS) === false) && (strpos($data[6], $THOUGHTS) !== false)))
-                               {
-                                    echo '<tr>';
-                                    for ($i=0;$i<count($data);$i++) {
+                            // 検索用フラグ
+                            $display = True;
+
+                            // nameが入力されている
+                            if(empty($NAME) === false) {
+                                // 部分一致しない
+                                if ((strpos($data[0], $NAME) === false)){
+                                    $display = false;
+                                }
+                            }
+                            // 年齢が入力されている
+                            if (empty($AGE) === false) {
+                                // 完全一致しない
+                                if (($data[1] !== $AGE)){
+                                    $display = false;
+                                }
+                            }
+                            // 性別が入力されている
+                            if (empty($GENDER) === false) {
+                                // 完全一致しない
+                                if ($data[2] !== $GENDER){
+                                    $display = false;
+                                }
+                            }
+                            // 住所が入力されている
+                            if (empty($ADDRESS) === false) {
+                                // 部分一致しない
+                                if (strpos($data[3], $ADDRESS) === false){
+                                    $display = false;
+                                }
+                            }
+                            // 電話番号が入力されている
+                            if (empty($TELEPHONE) === false) {
+                                // 部分一致しない
+                                if (strpos($data[4], $TELEPHONE) === false) {
+                                    $display = false;
+                                }
+                            }
+                            // メールが入力されている
+                            if (empty($MAIL) === false) {
+                                // 部分一致しない
+                                if (strpos($data[5], $MAIL) !== false) {
+                                    $display = false;
+                                }
+                            }
+                            // 感想が入力されている
+                            if (empty($THOUGHTS) === false) {
+                                // 完全一致しない
+                                if ($data[6] !== $THOUGHTS) {
+                                    $display = false;
+                                }
+                            }
+                            if ($display === True)
+                            {
+                                echo '<tr>';
+                                for ($i=0;$i<count($data);$i++) {
                                     echo "<td>" . $data[$i] . "</td>";
-                                    }
-                                    echo '</tr>';
-                               }
+                                }
+                                echo '</tr>';
+                            }
                         }
                     }
                 }
