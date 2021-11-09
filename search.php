@@ -99,8 +99,17 @@
                         echo "<td>" . $data[$i] . "</td>";
                     }
                     echo '</tr>';
-                    }else if (isset($_GET["name"], $_GET["age"], $_GET["gender"], $_GET["address"], $_GET["telephone"], $_GET["mail"], $_GET["thoughts"])) {
-                        if(empty($_GET['name']) && empty($_GET['age']) && empty($_GET['gender']) && empty($_GET['address']) && empty($_GET['telephone']) && empty($_GET['mail']) && empty($_GET['thoughts'])){
+                    }
+                    else if (isset($_GET["name"], $_GET["age"], $_GET["gender"], $_GET["address"], $_GET["telephone"], $_GET["mail"], $_GET["thoughts"]))
+                    {
+                        if(empty($_GET['name']) &&
+                           $_GET['age'] &&
+                           $_GET['gender'] &&
+                           $_GET['address'] &&
+                           $_GET['telephone'] &&
+                           $_GET['mail'] &&
+                           $_GET['thoughts'])
+                        {
                             echo '<tr>';
                             for ($i=0;$i<count($data);$i++) {
                             echo "<td>" . $data[$i] . "</td>";
