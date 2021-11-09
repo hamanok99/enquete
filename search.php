@@ -118,7 +118,7 @@
                     else
                     {
                         echo '<tr>';
-                        if($data[0] === $NAME){
+                        if(strpos($data[0], $NAME) !== false){
                             echo '<td>' . $data[0] . '</td>';
                         } else {
                             echo '<td></td>';
@@ -130,31 +130,31 @@
                             echo '<td></td>';
                         }
 
-                        if($data[2] === $GENDER){
+                        if(strpos($data[2], $GENDER) !== false){
                             echo '<td>' . $data[2] . '</td>';
                         } else {
                             echo '<td></td>';
                         }
 
-                        if($data[3] === $ADDRESS){
+                        if(strpos($data[3], $ADDRESS) !== false){
                             echo '<td>' . $data[3] . '</td>';
                         } else {
                             echo '<td></td>';
                         }
 
-                        if($data[4] === $TELEPHONE){
+                        if(strpos($data[4], $TELEPHONE) !== false){
                             echo '<td>' . $data[4] . '</td>';
                         } else {
                             echo '<td></td>';
                         }
 
-                        if($data[5] === $MAIL){
+                        if(strpos($data[5], $MAIL) !== false){
                             echo '<td>' . $data[5] . '</td>';
                         } else {
                             echo '<td></td>';
                         }
 
-                        if($data[6] === $THOUGHTS){
+                        if(strpos($data[6], $THOUGHTS) !== false){
                             echo '<td>' . $data[6] . '</td>';
                         } else {
                             echo '<td></td>';
