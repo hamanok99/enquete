@@ -104,6 +104,10 @@
                     //UTF-8に変換
                     mb_convert_variables("UTF-8", "SJIS-win", $data);
 
+                    echo strpos('田中', '田中') . "<br/>";
+                    echo strpos('田中','田') . "<br/>";
+                    echo strpos('田中','田') . "<br/>";
+                    echo '------<br/.';
                     echo $data[0] . ":" . $NAME . "<br/>";
                     echo strpos($data[0], $NAME) . "<br/>";
                     echo $data[1] . ":" . $AGE . "<br/>";
@@ -118,6 +122,24 @@
                     echo strpos($data[5], $MAIL) . "<br/>";
                     echo $data[6] . ":" . $THOUGHTS . "<br/>";
                     echo strpos($data[6], $THOUGHTS) . "<br/>";
+
+                    if(strpos($data[0], $NAME) !== false){
+                        echo 'name一致';
+                    }else if(strpos($data[1], $AGE) !== false){
+                        echo 'age一致';
+                    }else if(strpos($data[2], $GENDER) !== false){
+                        echo 'gender一致';
+                    }else if(strpos($data[3], $ADDRESS) !== false){
+                        echo 'address一致';
+                    }else if(strpos($data[4], $TELEPHONE) !== false){
+                        echo 'telephone一致';
+                    }else if(strpos($data[5], $MAIL) !== false){
+                        echo 'mail一致';
+                    }else if(strpos($data[6], $THOUGHTS) !== false){
+                        echo 'th一致';
+                    }
+
+
 
                     //入力項目と登録項目が完全一致の場合一覧表示
                     if(strpos($data[0], $NAME) !== false || strpos($data[1], $AGE) !== false || strpos($data[2], $GENDER) !== false || strpos($data[3], $ADDRESS) !== false
