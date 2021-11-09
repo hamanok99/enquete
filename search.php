@@ -107,7 +107,7 @@
                     echo strpos('田中', '田中') . "<br/>";
                     echo strpos('田中','田') . "<br/>";
                     echo strpos('田中','田') . "<br/>";
-                    echo '------<br/.';
+                    echo '------<br/>';
                     echo $data[0] . ":" . $NAME . "<br/>";
                     echo strpos($data[0], $NAME) . "<br/>";
                     echo $data[1] . ":" . $AGE . "<br/>";
