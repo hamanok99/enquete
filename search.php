@@ -109,23 +109,16 @@
                     echo strpos('田中','田') . "<br/>";
                     echo '------<br/>';
                     echo $data[0] . ":" . $NAME . "<br/>";
-                    echo strpos($data[0], $NAME) . "<br/>";
                     echo $data[1] . ":" . $AGE . "<br/>";
-                    echo strpos($data[1], $AGE) . "<br/>";
                     echo $data[2] . ":" . $GENDER . "<br/>";
-                    echo strpos($data[2], $GENDER) . "<br/>";
                     echo $data[3] . ":" . $ADDRESS . "<br/>";
-                    echo strpos($data[3], $ADDRESS) . "<br/>";
                     echo $data[4] . ":" . $TELEPHONE . "<br/>";
-                    echo strpos($data[4], $TELEPHONE) . "<br/>";
                     echo $data[5] . ":" . $MAIL . "<br/>";
-                    echo strpos($data[5], $MAIL) . "<br/>";
                     echo $data[6] . ":" . $THOUGHTS . "<br/>";
-                    echo strpos($data[6], $THOUGHTS) . "<br/>";
 
                     if(strpos($data[0], $NAME) !== false){
                         echo 'name一致';
-                    }else if(strpos($data[1], $AGE) !== false){
+                    }else if($data[1] == $AGE){
                         echo 'age一致';
                     }else if(strpos($data[2], $GENDER) !== false){
                         echo 'gender一致';
@@ -141,7 +134,7 @@
 
 
                     //入力項目と登録項目が完全一致の場合一覧表示
-                    if(strpos($data[0], $NAME) !== false || strpos($data[1], $AGE) !== false || strpos($data[2], $GENDER) !== false || strpos($data[3], $ADDRESS) !== false
+                    if(strpos($data[0], $NAME) !== false || $data[1] == $AGE || strpos($data[2], $GENDER) !== false || strpos($data[3], $ADDRESS) !== false
                     || strpos($data[4], $TELEPHONE) !== false || strpos($data[5], $MAIL) !== false || strpos($data[6], $THOUGHTS) !== false){
 
                         // テーブルセルに配列の値を格納
