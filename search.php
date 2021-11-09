@@ -140,7 +140,6 @@
                     }
 
 
-
                     //入力項目と登録項目が完全一致の場合一覧表示
                     if(strpos($data[0], $NAME) !== false || strpos($data[1], $AGE) !== false || strpos($data[2], $GENDER) !== false || strpos($data[3], $ADDRESS) !== false
                     || strpos($data[4], $TELEPHONE) !== false || strpos($data[5], $MAIL) !== false || strpos($data[6], $THOUGHTS) !== false){
