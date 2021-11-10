@@ -30,32 +30,32 @@ table.type06 td {
 <form action="search.php" method="POST" name='enquete'>
 <table class="type06">
     <tr>
-        <td style="width:100px;background-color:#3f3f3f;color: #ffffff">氏名</td>
-        <td style="width:100px;"><input type="text" name="name" value=""></td>
+        <td style="width:150px;background-color:#3f3f3f;color: #ffffff">氏名</td>
+        <td style="width:150px;"><input type="text" name="name" value=""></td>
     </tr>
     <tr>
-        <td style="width:100px;background-color:#3f3f3f;color: #ffffff">年齢</td>
-        <td style="width:100px;"><input type="text" width="30" name="age" value="">歳</td>
+        <td style="width:150px;background-color:#3f3f3f;color: #ffffff">年齢</td>
+        <td style="width:150px;"><input type="text" style="width:30px;" name="age" value="">歳</td>
     </tr>
     <tr>
-        <td style="width:100px;background-color:#3f3f3f;color: #ffffff">性別</td>
-        <td style="width:100px;"><select name="gender"><option>男性</option><option>女性</option></select></td>
+        <td style="width:150px;background-color:#3f3f3f;color: #ffffff">性別</td>
+        <td style="width:150px;"><select name="gender"><option>男性</option><option>女性</option></select></td>
     </tr>
     <tr>
-        <td style="width:100px;background-color:#3f3f3f;color: #ffffff">住所</td>
-        <td style="width:100px;"><input type="text" name="address" value=""></td>
+        <td style="width:150px;background-color:#3f3f3f;color: #ffffff">住所</td>
+        <td style="width:150px;"><input type="text" name="address" value=""></td>
     </tr>
     <tr>
-        <td style="width:100px;background-color:#3f3f3f;color: #ffffff">電話番号</td>
-        <td style="width:100px;"><input type="text" name="telephone" value=""></td>
+        <td style="width:150px;background-color:#3f3f3f;color: #ffffff">電話番号</td>
+        <td style="width:150px;"><input type="text" name="telephone" value=""></td>
     </tr>
     <tr>
-        <td style="width:100px;background-color:#3f3f3f;color: #ffffff">メールアドレス</td>
-        <td style="width:100px;"><input type="text" name="mail" value=""></td>
+        <td style="width:150px;background-color:#3f3f3f;color: #ffffff">メールアドレス</td>
+        <td style="width:150px;"><input type="text" name="mail" value=""></td>
     </tr>
     <tr>
-        <td style="width:100px;background-color:#3f3f3f;color: #ffffff">感想</td>
-        <td style="width:100px;"><input type="radio" name="thoughts" value="good">良い<input type="radio" name="thoughts" value="normal">普通<input type="radio" name="thoughts" value="bad">悪い</td>
+        <td style="width:150px;background-color:#3f3f3f;color: #ffffff">感想</td>
+        <td style="width:150px;"><input type="radio" name="thoughts" value="good">良い<input type="radio" name="thoughts" value="normal">普通<input type="radio" name="thoughts" value="bad">悪い</td>
     </tr>
 </table>
 <div style="margin: 10px 0;">
