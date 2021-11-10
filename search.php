@@ -37,32 +37,32 @@ table.type06 td {
 <form action="search.php" method="POST" name='enquete'>
 <table class="type0">
     <tr>
-        <td>氏名</td>
-        <td><input type="text" name="name" value=""></td>
+        <td style="background-color:#3f3f3f;color: #ffffff">氏名</td>
+        <td style="background-color:lightgrey"><input type="text" name="name" value=""></td>
     </tr>
     <tr>
-        <td>年齢</td>
-        <td><input type="text" name="age" value="">歳</td>
+        <td style="background-color:#3f3f3f;color: #ffffff">年齢</td>
+        <td style="background-color:lightgrey"><input type="text" name="age" value="">歳</td>
     </tr>
     <tr>
-        <td>性別</td>
-        <td><select name="gender"><option>男性</option><option>女性</option></select></td>
+        <td style="background-color:#3f3f3f;color: #ffffff">性別</td>
+        <td style="background-color:lightgrey"><select name="gender"><option>男性</option><option>女性</option></select></td>
     </tr>
     <tr>
-        <td>住所</td>
-        <td><input type="text" name="address" value=""></td>
+        <td style="background-color:#3f3f3f;color: #ffffff">住所</td>
+        <td style="background-color:lightgrey"><input type="text" name="address" value=""></td>
     </tr>
     <tr>
-        <td>電話番号</td>
-        <td><input type="text" name="telephone" value=""></td>
+        <td style="background-color:#3f3f3f;color: #ffffff">電話番号</td>
+        <td style="background-color:lightgrey"><input type="text" name="telephone" value=""></td>
     </tr>
     <tr>
-        <td>メールアドレス</td>
-        <td><input type="text" name="mail" value=""></td>
+        <td style="background-color:#3f3f3f;color: #ffffff">メールアドレス</td>
+        <td style="background-color:lightgrey"><input type="text" name="mail" value=""></td>
     </tr>
     <tr>
-        <td>感想</td>
-        <td><input type="radio" name="thoughts" value="good">良い<input type="radio" name="thoughts" value="normal">普通<input type="radio" name="thoughts" value="bad">悪い</td>
+        <td style="background-color:#3f3f3f;color: #ffffff">感想</td>
+        <td style="background-color:lightgrey"><input type="radio" name="thoughts" value="good">良い<input type="radio" name="thoughts" value="normal">普通<input type="radio" name="thoughts" value="bad">悪い</td>
     </tr>
 </table>
 <div style="margin: 10px 0;">
