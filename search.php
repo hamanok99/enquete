@@ -59,7 +59,7 @@ table.type06 td {
     </tr>
 </table>
 <div style="margin: 10px 0;">
-<button type="submit" style="width:80px;height:20px;">検索</button>
+<button type="submit" style="width:100px;height:30px;">検索</button>
 </div>
 
 <table>
