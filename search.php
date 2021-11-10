@@ -8,11 +8,19 @@ table, th, td {
   border-collapse: collapse;
   border: 1px solid #ccc;
   line-height: 1.5;
+  padding: 4px;
+}
+
+table.type0 {
+  border-collapse: collapse;
+  border: 1px solid #333;
+  line-height: 1.5;
+  padding: 4px;
 }
 
 table.type06 th {
   width: 150px;
-  padding: 10px;
+  padding: 5px;
   font-weight: bold;
   vertical-align: top;
   background: #3f3f3f;
@@ -27,29 +35,29 @@ table.type06 td {
 </head>
 <body>
 <form action="search.php" method="POST" name='enquete'>
-<table>
+<table class="type0">
     <tr>
-        <td style="background-color:lightblue">氏名</td>
+        <td style="background-color:lightgrey">氏名</td>
         <td><input type="text" name="name" value=""></td>
     </tr>
     <tr>
-        <td style="background-color:lightblue">年齢</td>
+        <td style="background-color:lightgrey">年齢</td>
         <td><input type="text" name="age" value="">歳</td>
     </tr>
     <tr>
-        <td style="background-color:lightblue">性別</td>
+        <td style="background-color:lightgrey">性別</td>
         <td><select name="gender"><option>男性</option><option>女性</option></select></td>
     </tr>
     <tr>
-        <td style="background-color:lightblue">住所</td>
+        <td style="background-color:lightgrey">住所</td>
         <td><input type="text" name="address" value=""></td>
     </tr>
     <tr>
-        <td style="background-color:lightblue">電話番号</td>
+        <td style="background-color:lightgrey">電話番号</td>
         <td><input type="text" name="telephone" value=""></td>
     </tr>
     <tr>
-        <td style="background-color:lightblue">メールアドレス</td>
+        <td style="background-color:lightgrey">メールアドレス</td>
         <td><input type="text" name="mail" value=""></td>
     </tr>
     <tr>
@@ -57,9 +65,10 @@ table.type06 td {
         <td><input type="radio" name="thoughts" value="good">良い<input type="radio" name="thoughts" value="normal">普通<input type="radio" name="thoughts" value="bad">悪い</td>
     </tr>
 	<tr>
-		<td><button type="submit">検索</button></td>
+		<td colspan="2"><button type="submit">検索</button></td>
 	</tr>
 </table>
+<br/>
 <table>
 <?php
 // テーブルタグを作成し、テーブルヘッダーで見出しを作る
