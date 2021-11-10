@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>検索画面</title>
 <style type="text/css">
-table, th, td {
+table.type06, th, td {
   border-collapse: collapse;
   border: 1px solid #ccc;
   line-height: 1.5;
