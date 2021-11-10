@@ -11,7 +11,7 @@ table.type06, th, td {
   padding: 4px;
 }
 
-table.type0 {
+table.type0 th, td {
   border-collapse: collapse;
   border: 1px solid #FFF;
   line-height: 1.5;
