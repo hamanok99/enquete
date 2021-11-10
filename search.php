@@ -12,8 +12,7 @@ table, th, td {
 }
 
 table.type0 {
-  border-collapse: collapse;
-  border: 1px solid #333;
+  border: none;
   line-height: 1.5;
   padding: 4px;
 }
@@ -37,38 +36,38 @@ table.type06 td {
 <form action="search.php" method="POST" name='enquete'>
 <table class="type0">
     <tr>
-        <td style="background-color:lightgrey">氏名</td>
+        <td>氏名</td>
         <td><input type="text" name="name" value=""></td>
     </tr>
     <tr>
-        <td style="background-color:lightgrey">年齢</td>
+        <td>年齢</td>
         <td><input type="text" name="age" value="">歳</td>
     </tr>
     <tr>
-        <td style="background-color:lightgrey">性別</td>
+        <td>性別</td>
         <td><select name="gender"><option>男性</option><option>女性</option></select></td>
     </tr>
     <tr>
-        <td style="background-color:lightgrey">住所</td>
+        <td>住所</td>
         <td><input type="text" name="address" value=""></td>
     </tr>
     <tr>
-        <td style="background-color:lightgrey">電話番号</td>
+        <td>電話番号</td>
         <td><input type="text" name="telephone" value=""></td>
     </tr>
     <tr>
-        <td style="background-color:lightgrey">メールアドレス</td>
+        <td>メールアドレス</td>
         <td><input type="text" name="mail" value=""></td>
     </tr>
     <tr>
-        <td style="background-color:lightblue">感想</td>
+        <td>感想</td>
         <td><input type="radio" name="thoughts" value="good">良い<input type="radio" name="thoughts" value="normal">普通<input type="radio" name="thoughts" value="bad">悪い</td>
     </tr>
-	<tr>
-		<td colspan="2"><button type="submit">検索</button></td>
-	</tr>
 </table>
-<br/>
+<div style="margin: 10px 0;">
+<button type="submit">検索</button>
+</div>
+
 <table>
 <?php
 // テーブルタグを作成し、テーブルヘッダーで見出しを作る
