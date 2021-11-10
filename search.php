@@ -4,16 +4,10 @@
 <meta charset="utf-8">
 <title>検索画面</title>
 <style type="text/css">
-table.type06, th, td {
+table, th, td {
   border-collapse: collapse;
   border: 1px solid #aaa;
   line-height: 1.5;
-  padding: 4px;
-}
-
-table.type0 th, td {
-  border-collapse: collapse;
-  border: 1px solid #AAA;
   padding: 4px;
 }
 
@@ -34,7 +28,7 @@ table.type06 td {
 </head>
 <body>
 <form action="search.php" method="POST" name='enquete'>
-<table class="type0">
+<table class="type06">
     <tr>
         <td style="background-color:#3f3f3f;color: #ffffff">氏名</td>
         <td><input type="text" name="name" value=""></td>
