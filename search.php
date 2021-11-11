@@ -27,11 +27,11 @@ table.type06 td {
 </style>
 </head>
 <body style="margin:0px;padding:0px;">
-<div style="background-color:#eee;padding:4px;text-align:center;margin: 0 calc(50% - 50vw);width: 100vw;">
-<a href="index.php">登録画面</a> / <a href="search.php">検索画面</a>
-</div>
-<br/>
+    <div style="background-color:#eee;padding:4px;text-align:center;margin: 0 calc(50% - 50vw);width: 100vw;">
+        <a href="index.php">登録画面</a> / <a href="search.php">検索画面</a>
+    </div>
 
+<hr/>
 
 <form action="search.php" method="POST" name='enquete'>
 <table class="type06">
