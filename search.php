@@ -28,7 +28,7 @@ table.type06 td {
 </head>
 <body>
 
-<div style="margin: 0 calc(50% - 50vw);width: 100vw;background-color:lightgrey;padding:4px;">
+<div style="background-color:lightgrey;padding:4px;text-align:center;margin: -5 calc(50% - 50vw);width: 100vw;">
 test
 </div>
 <br/>
