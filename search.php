@@ -26,10 +26,10 @@ table.type06 td {
 }
 </style>
 </head>
-<body>
+<body style="width:100%;">
 
 <div style="margin: 0 calc(50% - 50vw);width: 100vw;">
-    <span style="background-color:lightgrey;padding:4px;">test</span>
+    <span style="width:100%;background-color:lightgrey;padding:4px;">test</span>
 </div>
 <br/>
 
