@@ -26,9 +26,9 @@ table.type06 td {
 }
 </style>
 </head>
-<body style="margin:0;padding:0;">
-<div style="width:100%;margin: 0 calc(50% - 50vw);">
-<a style="width:100%;text-align:center;background-color:lightgrey;" href="index.php">登録画面</a>
+<body style="margin:0;padding:0;width:100%;">
+<div style="margin: 0 calc(50% - 50vw);">
+<a style="width:100%;padding:5px;text-align:center;background-color:lightgrey;" href="index.php">登録画面</a>
 </div>
 <br/>
 
