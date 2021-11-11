@@ -28,8 +28,8 @@ table.type06 td {
 </head>
 <body>
 
-<div style="margin: 0 calc(50% - 50vw);width: 100vw;">
-    <span style="width:100%;background-color:lightgrey;padding:4px;">test</span>
+<div style="margin: 0 calc(50% - 50vw);width: 100vw;background-color:lightgrey;padding:4px;">
+test
 </div>
 <br/>
 
