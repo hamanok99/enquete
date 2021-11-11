@@ -26,11 +26,10 @@ table.type06 td {
 }
 </style>
 </head>
-<body style="margin:0;padding:0;">
-<div style="width:100%;">
-<span style="margin: 0 calc(50% - 50vw);">
-<a style="padding:5px;text-align:center;background-color:lightgrey;" href="index.php">登録画面</a>
-</span>
+<body>
+
+<div style="margin: 0 calc(50% - 50vw);width: 100vw;">
+    <span style="background-color:lightgrey;padding:4px;">test</span>
 </div>
 <br/>
 
