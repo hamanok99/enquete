@@ -27,7 +27,7 @@ table.type06 td {
 </style>
 </head>
 <body>
-<div style="background-color:lightgrey; margin:0; padding:4px;text-align: center">
+<div style="width:100%;background-color:lightgrey; margin:0; padding:4px;text-align: center">
 <a href="index.php" style="color:darkslategray;">登録画面</a> / <a href="search.php" style="color:darkslategray;">検索画面</a>
 </div>
 <br/>
